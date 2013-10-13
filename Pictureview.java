@@ -15,18 +15,6 @@ public class Pictureview extends JFrame{
 	int x1, y1, x2, y2;
 	int height, width;
 	
-	class MainAction implements ActionListener{
-		public void actionPerformed(ActionEvent e) {
-		  String Label;
-		  Label = e.getActionCommand();
-		  if(Label.equals("Закрыть"))
-			  System.exit(0);
-		  if(Label.equals("Загрузить изображение"))
-			  loadImage();
-		}
-		
-	}
-	
 	Pictureview(String titel){
 		super(titel);
 		xpos=ypos=0;
@@ -76,18 +64,5 @@ public class Pictureview extends JFrame{
 
 	}
 
-	class Picturerun extends JPanel{
-		public void paintComponent(Graphics g){
-			super.paintComponent(g);
-			if(picture != null)
-				g.drawImage(picture, xpos,ypos,this);	
-			}
-			public Dimension getMinimumSize(){
-				return okno.getSize();
-				}
-			 public Dimension getPreferredSize() {
-			      return getMinimumSize();
-				
-			}
-		}
+	
 	}
